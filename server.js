@@ -14,7 +14,7 @@ io.on('connection',(socket)=>{
     console.log("New socket formed from " + socket.id)
     socket.emit('connected')
     socket.on('send_msg',(data)=>{
-       io.emit('recv_msg',data);
+       io.emit('recv_msg',data)
     })
 })
 
