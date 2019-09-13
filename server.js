@@ -16,8 +16,8 @@ io.on('connection',(socket)=>{
     socket.on('send_msg',(data)=>{
         //if we use io.emit everyone gets it
         //if we use socket.broadcast.emit only others get it 
-     //   io.emit('recv_msg', data)
-     socket.broadcast.emit('recv_msg', data)
+        io.emit('recv_msg', data)
+     //socket.broadcast.emit('recv_msg', data)
 
     })
 })
