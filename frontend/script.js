@@ -24,6 +24,9 @@ $(function(){
         user = loginbox.val();
         chatDiv.show()
         loginDiv.hide()
+        socket.emit('login',{
+            user:user
+        })
     })
 
     socket.on('recv_msg', function(data){
